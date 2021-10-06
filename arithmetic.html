@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Soliving some arthematic expression</title>
+<title>Solving some arthematic expression</title>
 
 <body>
 
@@ -19,25 +19,25 @@
     <p id="result">This text will be replaced </p>
 
     <form>
-        <input type="radio" id="rg1_plus" name="operation" value="plus" onclick="processRadio()">
+        <input type="radio" id="rg_plus" name="operation" value="plus" onclick="processRadio()">
         <label for="rg1_plus">+</label></br></br>
 
-        <input type="radio" id="rg1_minus" name="operation" value="minus" onclick="processRadio()">
+        <input type="radio" id="rg_minus" name="operation" value="minus" onclick="processRadio()">
         <label for="rg1_minus">-</label></br></br>
 
-        <input type="radio" id="rg1_times" name="operation" value="times" onclick="processRadio()">
+        <input type="radio" id="rg_times" name="operation" value="times" onclick="processRadio()">
         <label for="rg1_times">*</label></br></br>
 
-        <input type="radio" id="rg1_divide" name="operation" value="divide" onclick="processRadio()">
+        <input type="radio" id="rg_divide" name="operation" value="divide" onclick="processRadio()">
         <label for="rg1_divide">/</label></br></br>
     </form>
 
-    <p id="Result1">This text will be replaced </p>
+    <p id="Result_1">This text will be replaced </p>
 
     <script>
 
         function powers() {
-            
+
             console.log("Getting form values")
             base = document.getElementById("form1_base").value
             exponent = document.getElementById("form1_exponent").value
@@ -45,7 +45,7 @@
             r = 1
             out = document.getElementById("result")
             for (i = 1; i <= exponent; i++) {
-                r *= base;
+                r =r* base;
                 result += r + " "
             }
             out.innerHTML = result
@@ -53,21 +53,21 @@
         function processRadio() {
             base = document.getElementById("form1_base").value
             exponent = document.getElementById("form1_exponent").value
-            plus = document.getElementById("rg1_plus").checked
-            minus = document.getElementById("rg1_minus").checked
-            times = document.getElementById("rg1_times").checked
-            divide = document.getElementById("rg1_divide").checked
-            result = document.getElementById("Result1")
+            plus = document.getElementById("rg_plus").checked
+            minus = document.getElementById("rg_minus").checked
+            times = document.getElementById("rg_times").checked
+            divide = document.getElementById("rg_divide").checked
+            result = document.getElementById("Result_1")
 
             if(plus)
                 result.innerHTML = +base + +exponent
-            else 
+            
             if (minus)
                 result.innerHTML = base - exponent
-            else 
+             
             if (times)
                 result.innerHTML = base * exponent
-            else
+            if (divide)
                 result.innerHTML = base / exponent
         }
 
