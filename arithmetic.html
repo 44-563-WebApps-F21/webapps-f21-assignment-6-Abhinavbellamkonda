@@ -33,11 +33,8 @@
     </form>
 
     <p id="Result_1">This text will be replaced </p>
-
     <script>
-
         function powers() {
-
             console.log("Getting form values")
             base = document.getElementById("form1_base").value
             exponent = document.getElementById("form1_exponent").value
@@ -45,7 +42,7 @@
             r = 1
             out = document.getElementById("result")
             for (i = 1; i <= exponent; i++) {
-                r =r* base;
+                r = r * base;
                 result += r + " "
             }
             out.innerHTML = result
@@ -59,12 +56,12 @@
             divide = document.getElementById("rg_divide").checked
             result = document.getElementById("Result_1")
 
-            if(plus)
+            if (plus)
                 result.innerHTML = +base + +exponent
-            
+
             if (minus)
                 result.innerHTML = base - exponent
-             
+
             if (times)
                 result.innerHTML = base * exponent
             if (divide)
